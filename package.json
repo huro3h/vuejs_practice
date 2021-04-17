@@ -1,5 +1,5 @@
 {
-  "name": "vuejs_practice",
+  "name": "my-webpack-project",
   "version": "1.0.0",
   "main": "index.js",
   "author": "huro3h <huro3h@gmail.com>",
@@ -8,8 +8,25 @@
     "vue": "^2.6.12"
   },
   "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "@webpack-cli/generators": "^2.0.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.2",
+    "html-webpack-plugin": "^5.3.1",
+    "sass": "^1.32.10",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
     "webpack": "^5.33.2",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"
+  },
+  "description": "My webpack project",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production",
+    "watch": "webpack --watch",
+    "serve": "webpack serve"
   }
 }
