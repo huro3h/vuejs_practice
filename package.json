@@ -1,0 +1,10 @@
+{
+  "name": "vuejs_practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "huro3h <huro3h@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
+}
