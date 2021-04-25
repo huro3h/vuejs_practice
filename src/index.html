@@ -14,7 +14,7 @@
     <p>合計: {{ totalPrice | numberWithDelimiter }}</p>
     <p>税込: {{ totalPriceWithTax | numberWithDelimiter }}</p>
     <p>
-      <span v-bind:style="errorMessageStyle">
+      <span :style="errorMessageStyle">
         {{ 5000 | numberWithDelimiter }} 円以上から
       </span>
     </p>
