@@ -1,30 +1,31 @@
-console.log('Hello World!');
-
-import { Vue } from "vue/dist/vue"
-
-const vm = new Vue({
-  data: {
-    items: items
-  }
-}).$mount('#app')
+import * as Vue from 'vue';
 
 const items = [
   {
-    name: 'hoge',
+    name: 'apple',
     price: 133,
     quantity: 1
   },
   {
-    name: 'huga',
+    name: 'orange',
     price: 34,
-    quantity: 12
+    quantity: 6
   },
   {
-    name: 'foo',
-    price: 998,
-    quantity: 65
+    name: 'grape',
+    price: 198,
+    quantity: 6
   }
 ]
+
+const vm = new Vue({
+  el: '#app',
+  data: {
+    items: items
+  }
+});
+
+vm.$mount(el);
 
 // $watch 変更を監視
 
