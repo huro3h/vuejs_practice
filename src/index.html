@@ -13,10 +13,12 @@
 <!--    <p>フィルター例 {{ 100000 | numberWithDelimiter }}</p>-->
     <p>合計: {{ totalPrice | numberWithDelimiter }}</p>
     <p>税込: {{ totalPriceWithTax | numberWithDelimiter }}</p>
-
-    <p v-show="!canBuy" class="alert alert-info">
-      {{ 5000 | numberWithDelimiter }} 円以上から
+    <p>
+      <span v-bind:style="errorMessageStyle">
+        {{ 5000 | numberWithDelimiter }} 円以上から
+        </span>
     </p>
+
   </div>
 </div>
 </body>
