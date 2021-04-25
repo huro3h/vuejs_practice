@@ -39,8 +39,11 @@ const vm = new Vue({
     },
     totalPriceWithTax: function () {
       return Math.floor(this.totalPrice * 1.1)
+    },
+    canBuy: function () {
+      return this.totalPrice >= 5000
     }
   }
 });
 
-// vm.$mount(el)
+window.vm = vm
