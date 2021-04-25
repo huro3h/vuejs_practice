@@ -4,7 +4,7 @@ const items = [
   {
     name: 'apple',
     price: 133,
-    quantity: 1
+    quantity: 13
   },
   {
     name: 'orange',
@@ -21,16 +21,16 @@ const items = [
 const vm = new Vue({
   el: '#app',
   data: {
-    items: items
+    items: items,
+  },
+  filters: {
+    numberWithDelimiter: function (val) {
+      if (!val) {
+        return '0';
+      }
+      return val.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1,')
+    }
   }
 });
 
-vm.$mount(el);
-
-// $watch 変更を監視
-
-// vm.$watch(function () {
-//   return this.items[0].quantity
-// }, function (quantity) {
-//   console.log(qquantity);
-// })
+// vm.$mount(el)
