@@ -1,20 +1,22 @@
 // Generated using webpack-cli http://github.com/webpack-cli
-const path = require('path');
+const { path, resolve }  = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: resolve(__dirname, 'dist'),
+        filename: 'bundle.js'
     },
-    devServer: {
-        open: true,
-        host: 'localhost',
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js',
+        },
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'index.html',
+            template: './src/index.html',
         }),
 
         // Add your plugins here
@@ -42,5 +44,13 @@ module.exports = {
             // Add your rules for custom modules here
             // Learn more about loaders from https://webpack.js.org/loaders/
         ],
+    },
+    devServer: {
+        watchContentBase: true,
+        // 実行時(サーバー起動時)ブラウザ自動起動
+        open: true,
+        openPage: "index.html",
+        // 同一network内からのアクセス可能に
+        host: "0.0.0.0"
     },
 };
