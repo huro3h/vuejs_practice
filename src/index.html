@@ -8,6 +8,14 @@
 <div>
   <p>practice</p>
   <div id="app">
+    <div>
+      <ul>
+        <li v-for="item in items" v-bind:key="item.name">
+          {{ item.name }} 個数 :  <input type="number" v-on:input="item.quantity = $event.target.value" v-bind:value="item.quantity" min="0">
+        </li>
+      </ul>
+    </div>
+    <hr>
     <li v-for="item in items" v-bind:key="item.name">
       {{ item.name }}: {{ item.price }} x {{ item.quantity }} = {{ item.price * item.quantity | numberWithDelimiter}}円
     </li>
