@@ -11,13 +11,17 @@
     <div>
       <ul>
         <li v-for="item in items" v-bind:key="item.name">
-          {{ item.name }} 個数 :  <input type="number" v-on:change="item.quantity = $event.target.value" v-bind:value="item.quantity" min="0">
+          {{ item.name }} 個数 : <input type="number"
+                                      v-on:change="item.quantity = $event.target.value"
+                                      v-bind:value="item.quantity"
+                                      min="0"
+        >
         </li>
       </ul>
     </div>
     <hr>
     <li v-for="item in items" v-bind:key="item.name">
-      {{ item.name }}: {{ item.price }} x {{ item.quantity }} = {{ item.price * item.quantity | numberWithDelimiter}}円
+      {{ item.name }}: {{ item.price }} x {{ item.quantity }} = {{ item.price * item.quantity | numberWithDelimiter }}円
     </li>
     <p></p>
     <p>合計: {{ totalPrice | numberWithDelimiter }}</p>
