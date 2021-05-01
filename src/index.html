@@ -2,40 +2,11 @@
 <html>
 <head>
   <meta charset="utf-8"/>
-  <title>Webpack App</title>
+  <title>test_hoge</title>
 </head>
 <body>
-<div>
-  <p>practice</p>
-  <div id="app">
-    <div>
-      <ul>
-        <li v-for="item in items" v-bind:key="item.name">
-          <!-- v-on → v-model -->
-          {{ item.name }} 個数 : <input type="number"
-                                      v-model:change="item.quantity"
-                                      min="0"
-        >
-        </li>
-      </ul>
-    </div>
-    <hr>
-    <li v-for="item in items" v-bind:key="item.name">
-      {{ item.name }}: {{ item.price }} x {{ item.quantity }} = {{ item.price * item.quantity | numberWithDelimiter }}円
-    </li>
-    <p></p>
-    <p>合計: {{ totalPrice | numberWithDelimiter }}</p>
-    <p>税込: {{ totalPriceWithTax | numberWithDelimiter }}</p>
-    <p>
-      <span :style="errorMessageStyle">
-        {{ 5000 | numberWithDelimiter }} 円以上から
-      </span>
-    </p>
-  </div>
-
-  <div id="practice-app">
-    <p>{{ count }}</p>
-  </div>
+<div id="hoge-list">
+  <hoge-list-title></hoge-list-title>
 </div>
 </body>
 </html>
