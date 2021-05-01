@@ -5,8 +5,10 @@
   <title>test_hoge</title>
 </head>
 <body>
-<div id="app">
-  <hoge-desc v-bind:hoge-name="myHoge"></hoge-desc>
-</div>
+  <div id="app-component">
+    <ol>
+      <hoge-name v-for="hoge in hogeItems" :key="hoge.name" :hoge-item="hoge"></hoge-name>
+    </ol>
+  </div>
 </body>
 </html>
