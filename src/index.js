@@ -1,11 +1,17 @@
 import * as Vue from 'vue';
 
-Vue.component('hoge-list-title', {
-  template: '<h4>test_title</h4>'
+Vue.component('hoge-desc', {
+  props: {
+    hogeName : {
+      type: String
+    }
+  },
+  template: '<p>{{ hogeName }} = foo です</p>'
 })
 
-const vm = new Vue({
-  el: '#hoge-list'
+new Vue({
+  el: '#app',
+  data: { myHoge: 'foo' }
 })
 
-window.vm = vm;
+// window.vm = vm;
