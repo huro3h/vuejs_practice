@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "sample.vue"
+  name: "my-component.vue"
 }
 </script>
 
