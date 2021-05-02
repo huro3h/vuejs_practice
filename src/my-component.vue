@@ -1,15 +1,19 @@
 <template>
   <div>
-    <input type="text" placeholder="enter your email" v-model="email">
-    <input type="text" placeholder="password" v-model="password">
-    <button @click="login">ログイン</button>
+    <div>
+      <input type="text" placeholder="enter your email" v-model="email">
+      <input type="text" placeholder="password" v-model="password">
+    </div>
+    <div>
+      <button @click="login">ログイン</button>
+    </div>
   </div>
 </template>
 
 <script>
 const auth = {
   login: function(email, pass) {
-    console.log(email + pass);
+    console.log(`email: ${email}`  + "\n" + `pass: ${pass}`);
   }
 }
 
