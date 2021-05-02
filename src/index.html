@@ -3,15 +3,11 @@
 <head>
   <meta charset="utf-8"/>
   <link rel="icon" href="data:;base64,=">
-  <title>test_hoge</title>
+  <title>あれ</title>
 </head>
 <body>
-  <div id="areCounter">
-    <div v-for="are in ares">
-      <!-- カスタムイベントの捕捉 -->
-      {{ are.name }}: <counter-button v-on:increment="incrementCartStatus"></counter-button>
-    </div>
-    <p>合計: {{ total }}</p>
+  <div id="are-list">
+    <my-component></my-component>
   </div>
 </body>
 </html>

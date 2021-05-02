@@ -1,6 +1,7 @@
 // Generated using webpack-cli http://github.com/webpack-cli
 const { path, resolve }  = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
     mode: 'development',
@@ -9,20 +10,6 @@ module.exports = {
         path: resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
-    resolve: {
-        alias: {
-            // 'vue$': 'vue/dist/vue.esm.js',
-            vue: 'vue/dist/vue.js'
-        },
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: './src/index.html',
-        }),
-
-        // Add your plugins here
-        // Learn more obout plugins from https://webpack.js.org/configuration/plugins/
-    ],
     module: {
         rules: [
             {
@@ -46,10 +33,27 @@ module.exports = {
                 enforce: 'pre',
                 use: ['source-map-loader'],
             },
+            {
+                test: /\.vue$/,
+                exclude: /node_modules/,
+                loader: 'vue-loader',
+            },
             // Add your rules for custom modules here
             // Learn more about loaders from https://webpack.js.org/loaders/
         ],
     },
+    resolve: {
+        alias: {
+            // 'vue$': 'vue/dist/vue.esm.js',
+            vue: 'vue/dist/vue.js'
+        },
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+        }),
+        new VueLoaderPlugin(),
+    ],
     devServer: {
         watchContentBase: true,
         // 実行時(サーバー起動時)ブラウザ自動起動
