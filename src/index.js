@@ -1,21 +1,37 @@
 import * as Vue from 'vue';
 
-Vue.component('hoge-name', {
-  props: {
-    hogeItem: {
-      type: Object,
-      required: true
+// child component
+let counterButton = Vue.extend({
+  template: '<span>{{ counter }}個<button class="btn btn-primary" v-on:click="addToCart">追加</button></span>',
+  data: function () {
+    return {
+      counter: 0
     }
   },
-  template: '<li>{{hogeItem.name}}</li>'
+  methods: {
+    addToCart: function () {
+      this.counter += 1
+      this.$emit('increment')
+    }
+  },
 })
 
+// parent component
 new Vue({
-  el: '#app-component',
+  el: '#areCounter',
+  components: {
+    'counter-button': counterButton
+  },
   data: {
-    hogeItems: [
-      { name: 'hoge1' },
-      { name: 'hoge2' }
+    total: 0,
+    ares: [
+      { name: 'hoge' },
+      { name: 'fuga' }
     ]
+  },
+  methods: {
+    incrementCartStatus: function () {
+      this.total += 1
+    }
   }
 })

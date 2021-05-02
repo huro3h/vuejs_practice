@@ -6,15 +6,12 @@
   <title>test_hoge</title>
 </head>
 <body>
-  <div id="app-component">
-    <ol>
-      <hoge-name
-        v-for="hoge in hogeItems"
-        :key="hoge.name"
-        :hoge-item="hoge">
-        <!--  ↑ ここで受け渡し-->
-      </hoge-name>
-    </ol>
+  <div id="areCounter">
+    <div v-for="are in ares">
+      <!-- カスタムイベントの捕捉 -->
+      {{ are.name }}: <counter-button v-on:increment="incrementCartStatus"></counter-button>
+    </div>
+    <p>合計: {{ total }}</p>
   </div>
 </body>
 </html>
