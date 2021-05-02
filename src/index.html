@@ -8,7 +8,12 @@
 <body>
   <div id="app-component">
     <ol>
-      <hoge-name v-for="hoge in hogeItems" :key="hoge.name" :hoge-item="hoge"></hoge-name>
+      <hoge-name
+        v-for="hoge in hogeItems"
+        :key="hoge.name"
+        :hoge-item="hoge">
+        <!--  ↑ ここで受け渡し-->
+      </hoge-name>
     </ol>
   </div>
 </body>
