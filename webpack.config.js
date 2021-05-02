@@ -41,7 +41,11 @@ module.exports = {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/,
                 type: 'asset',
             },
-
+            {
+                test: /\.js$/,
+                enforce: 'pre',
+                use: ['source-map-loader'],
+            },
             // Add your rules for custom modules here
             // Learn more about loaders from https://webpack.js.org/loaders/
         ],
