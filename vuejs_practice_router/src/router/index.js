@@ -26,6 +26,11 @@ export default new Router({
         template: '<div>ユーザー一覧ページですね</div>'
       }
     },
+    {
+      path: '*',
+      component: {
+        template: '<div>404 Not Foundですね</div>'
+      }
     }
   ]
 })
