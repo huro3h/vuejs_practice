@@ -15,7 +15,7 @@ export default new Router({
     // },
     {
       path: '/',
-      name: 'Top',
+      name: 'root',
       component: {
         template: '<div>Topページですね</div>'
       }

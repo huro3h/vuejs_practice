@@ -4,7 +4,7 @@
       <img src="./assets/logo.png">
     </div>
     <div>
-      <router-link to="/">トップページ</router-link>
+      <router-link :to="{ name: 'root' }">トップページ</router-link>
       <router-link to="/users">ユーザ一一覧ページ</router-link>
       <router-view/>
     </div>
