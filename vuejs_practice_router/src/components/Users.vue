@@ -1,5 +1,7 @@
 <template>
-
+  <div id="user-list">
+    ユーザー一覧ページですよね? ここ
+  </div>
 </template>
 
 <script>

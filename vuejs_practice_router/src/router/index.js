@@ -23,14 +23,12 @@ export default new Router({
     {
       path: '/users',
       name: 'Users',
-      component: {
-        template: '<div>ユーザー一覧ページですね</div>'
-      }
+      component: Users
     },
     {
       // ユーザID部分はコロンではじまるパターンマッチング
       path: '/user/:userId',
-      name: 'Users',
+      name: 'UserIds',
       component: {
         // $route.paramsでパラメータを参照可能
         template: '<div>ユーザーID {{ $route.params.userId }} ですね</div>'
