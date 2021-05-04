@@ -15,7 +15,7 @@ export default new Router({
     // },
     {
       path: '/',
-      name: 'root',
+      name: 'Top',
       component: {
         template: '<div>Topページですね</div>'
       }
@@ -25,6 +25,15 @@ export default new Router({
       name: 'Users',
       component: {
         template: '<div>ユーザー一覧ページですね</div>'
+      }
+    },
+    {
+      // ユーザID部分はコロンではじまるパターンマッチング
+      path: '/user/:userId',
+      name: 'Users',
+      component: {
+        // $route.paramsでパラメータを参照可能
+        template: '<div>ユーザーID {{ $route.params.userId }} ですね</div>'
       }
     },
     {
