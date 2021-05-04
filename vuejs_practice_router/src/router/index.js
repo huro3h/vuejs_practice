@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Top from '@/components/Top'
 import Users from '@/components/Users'
+import UserDetail from '@/components/UserDetail'
 
 Vue.use(Router)
 
@@ -23,10 +24,7 @@ export default new Router({
       // ユーザID部分はコロンではじまるパターンマッチング
       path: '/user/:userId',
       name: 'UserIds',
-      component: {
-        // $route.paramsでパラメータを参照可能
-        template: '<div>ユーザーID {{ $route.params.userId }} ですね</div>'
-      }
+      component: { UserDetail }
     },
     {
       path: '*',
