@@ -11,6 +11,8 @@
 </template>
 
 <script>
+// user一覧の元データ
+import { getUsers } from '@/usersDataList'
 
 export default {
   name: "Users",
@@ -44,21 +46,6 @@ export default {
   }
 }
 
-// HTML上のDOM要素のidを指定
-const getUsers = function (callback) {
-  setTimeout(function () {
-    callback(null, [
-      {
-        id: 1,
-        name: 'Taro Hoge'
-      },
-      {
-        id: 2,
-        name: 'Takashi Hoge'
-      },
-    ])
-  }, 2000)
-}
 </script>
 
 <style scoped>

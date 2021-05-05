@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+// user一覧の元データ
+import { getUsers,  usersDataList } from '@/usersDataList'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
