@@ -23,8 +23,8 @@ export default new Router({
     {
       // ユーザID部分はコロンではじまるパターンマッチング
       path: '/user/:userId',
-      name: 'UserIds',
-      component: { UserDetail }
+      // name: 'UserIds',
+      component: UserDetail,
     },
     {
       path: '*',

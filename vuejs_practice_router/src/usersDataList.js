@@ -7,12 +7,12 @@ export const getUsers = function (callback) {
 
 export const usersDataList = [
   {
-    userId: 1,
+    id: 1,
     name: 'Taro Hoge',
     description: '3食昼寝付き'
   },
   {
-    userId: 2,
+    id: 2,
     name: 'Takashi Hoge',
     description: '深酒部 部長'
   }
