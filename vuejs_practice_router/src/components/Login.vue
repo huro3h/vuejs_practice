@@ -15,7 +15,7 @@
 </template>
 
 <script>
-const Auth = {
+export const Auth = {
   login: function (email, pass, cb) {
     // ダミーデータを使った疑似ログイン
     setTimeout(function () {

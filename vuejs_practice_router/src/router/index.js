@@ -4,7 +4,7 @@ import Top from '@/components/Top'
 import Users from '@/components/Users'
 import UserDetail from '@/components/UserDetail'
 import UserCreate from '@/components/UserCreate'
-import Login from '@/components/Login'
+import Login, { Auth } from '@/components/Login'
 
 Vue.use(Router)
 
