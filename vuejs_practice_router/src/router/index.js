@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Top from '@/components/Top'
 import Users from '@/components/Users'
 import UserDetail from '@/components/UserDetail'
+import UserCreate from '@/components/UserCreate'
 
 Vue.use(Router)
 
@@ -18,7 +19,11 @@ export default new Router({
     {
       path: '/users',
       name: 'Users',
-      component: Users
+      component: Users,
+    },
+    {
+      path: '/users/new',
+      component: UserCreate,
     },
     {
       // ユーザID部分はコロンではじまるパターンマッチング
