@@ -22,7 +22,7 @@ export default new Router({
     },
     {
       // ユーザID部分はコロンではじまるパターンマッチング
-      path: '/user/:userId',
+      path: '/users/:userId',
       // name: 'UserIds',
       component: UserDetail,
     },
