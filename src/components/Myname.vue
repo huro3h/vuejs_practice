@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     echoName: function(ev) {
-      console.log('ここに名前出すよ')
+      console.log(this.myName);
     }
     
   },
