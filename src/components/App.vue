@@ -1,17 +1,18 @@
 <template>
-<p>
-  vue test
-</p>
+  <my-name></my-name>
 </template>
 
 <script>
-export default {
-  name: "App"
-}
+import Myname from "./Myname";
 
-console.log('hello');
+export default {
+  name: "App",
+  components: {
+    'my-name': Myname
+  },
+  
+}
 </script>
 
 <style scoped>
-
 </style>
