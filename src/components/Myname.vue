@@ -5,6 +5,7 @@
       <input type="text" id="name" v-model="myName"/>
     </form>
     <div>{{ myName }} さん?</div>
+    <button v-on:click="echoName">名前を確認</button>
   </div>
 </template>
 
@@ -15,6 +16,12 @@ export default {
     return {
       myName: 'guest'
     }
+  },
+  methods: {
+    echoName: function(ev) {
+      console.log('ここに名前出すよ')
+    }
+    
   },
 }
 </script>
