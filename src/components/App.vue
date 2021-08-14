@@ -1,6 +1,6 @@
 <template>
   <div>
-    <my-name huga="ふが"></my-name>
+    <my-name :huga="hugaString"></my-name>
     <dog-form></dog-form>
   </div>
 </template>
@@ -11,6 +11,11 @@ import DogForm from "./DogForm";
 
 export default {
   name: "App",
+  data() {
+    return {
+      hugaString: 'ふが'
+    }
+  },
   components: {
     'my-name': MyName,
     'dog-form': DogForm,
