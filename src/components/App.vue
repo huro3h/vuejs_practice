@@ -6,13 +6,13 @@
 </template>
 
 <script>
-import Myname from "./Myname";
+import MyName from "./MyName";
 import DogForm from "./DogForm";
 
 export default {
   name: "App",
   components: {
-    'my-name': Myname,
+    'my-name': MyName,
     'dog-form': DogForm,
   },
   
