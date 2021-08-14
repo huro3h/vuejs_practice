@@ -8,7 +8,7 @@ import Myname from "./Myname";
 export default {
   name: "App",
   components: {
-    'my-name': Myname
+    'my-name': Myname,
   },
   
 }

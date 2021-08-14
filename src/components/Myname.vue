@@ -10,6 +10,9 @@
       <input type="radio" id="type-b" value="B" v-model="hogeType"/>
       <label for="type-c">C</label>
       <input type="radio" id="type-c" value="C" v-model="hogeType"/>
+      <br><br>
+      <label for="age-number">レベル: </label>
+      <input type="text" id="age-number" v-model.number="ageNumber"/>
     </form>
     <br>
     <div>{{ myName }} さん? タイプ: {{ hogeType }}</div>
@@ -24,12 +27,14 @@ export default {
     return {
       myName: 'guest',
       hogeType: '',
+      ageNumber: 0,
     }
   },
   methods: {
     echoProps: function(ev) {
       console.log(this.myName);
       console.log(this.hogeType ? this.hogeType : '未選択');
+      console.log(this.ageNumber);
     }
   },
 }
