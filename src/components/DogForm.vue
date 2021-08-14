@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: "DogForm.vue",
+  name: "DogForm",
   data() {
     return {
       panelToggle: true,
