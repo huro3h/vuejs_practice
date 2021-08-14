@@ -2,7 +2,7 @@
   <div>
     <form>
       <label for="name">氏名: </label>
-      <input type="text" id="name" v-model.trim="myName"/>
+      <input type="text" id="name" v-model.trim.lazy="myName"/>
       <br><br>
       <label for="type-a">A</label>
       <input type="radio" id="type-a" value="A" v-model="hogeType"/>
