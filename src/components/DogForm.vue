@@ -6,11 +6,12 @@
       <input type="checkbox" id="toggle-show" v-model="panelToggle">
     </form>
     <div id="panel" v-if="panelToggle">
-      見える?
+      {{ shownMessage }}
     </div>
     <div v-else>
       見えてないよ
     </div>
+    <button v-on:click="updateMessage">3秒後にメッセージ変えるボタン</button>
   </div>
 </template>
 
@@ -19,7 +20,15 @@ export default {
   name: "DogForm.vue",
   data() {
     return {
-      panelToggle: true
+      panelToggle: true,
+      shownMessage: '見えてます?'
+    }
+  },
+  methods: {
+    updateMessage: function() {
+      setTimeout(() => {
+        this.shownMessage = '3秒後'
+      }, 3000);
     }
   }
 }
