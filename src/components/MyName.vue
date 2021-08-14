@@ -15,7 +15,8 @@
       <input type="text" id="age-number" v-model.number="ageNumber"/>
     </form>
     <br>
-    <div>{{ myName }} さん? タイプ: {{ hogeType }}</div>
+    <div>{{ myName }} さん? タイプ: {{ hogeType }}</div><br>
+    <div>debug: {{ huga }}</div>
     <button v-on:click="echoProps">名前とタイプを確認</button>
   </div>
 </template>
@@ -23,6 +24,7 @@
 <script>
 export default {
   name: "my-name",
+  props: ["huga"],
   data() {
     return {
       myName: 'guest',

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <my-name></my-name>
+    <my-name huga="ふが"></my-name>
     <dog-form></dog-form>
   </div>
 </template>
