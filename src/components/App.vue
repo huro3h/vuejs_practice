@@ -2,14 +2,16 @@
   <div>
     <my-name :huga="hugaString"></my-name>
     <!--    <dog-form></dog-form>-->
-    <my-counter :counter="AreCounter"></my-counter>
+    <!--    v-on:(子から送られてくるイベント名)-->
+    <my-counter-button :counter="10" v-on:increment="onincrement"></my-counter-button>
+    {{ AreCounter }}
   </div>
 </template>
 
 <script>
 import MyName from "./MyName";
 import DogForm from "./DogForm";
-import MyCounter from "./MyCounter";
+import MyCounterButton from "./MyCounterButton";
 
 export default {
   name: "App",
@@ -22,9 +24,13 @@ export default {
   components: {
     'my-name': MyName,
     // 'dog-form': DogForm,
-    'my-counter': MyCounter,
+    'my-counter-button': MyCounterButton,
   },
-  
+  methods: {
+    onincrement(e) {
+      this.AreCounter += e
+    }
+  }
 }
 </script>
 

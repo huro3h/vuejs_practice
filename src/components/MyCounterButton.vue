@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "MyCounter",
+  name: "my-counter-button",
   props: [
     'counter'
   ],
