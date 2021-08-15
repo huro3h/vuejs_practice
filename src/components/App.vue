@@ -5,6 +5,8 @@
     <!--    v-on:(子から送られてくるイベント名)-->
     <my-counter-button counter="10" v-on:increment="onincrement"></my-counter-button>
     {{ AreCounter }}
+    <br>
+    <my-hello>要素がある</my-hello>
   </div>
 </template>
 
@@ -12,6 +14,7 @@
 import MyName from "./MyName";
 import DogForm from "./DogForm";
 import MyCounterButton from "./MyCounterButton";
+import MyHello from "./MyHello";
 
 export default {
   name: "App",
@@ -25,6 +28,7 @@ export default {
     'my-name': MyName,
     // 'dog-form': DogForm,
     'my-counter-button': MyCounterButton,
+    'my-hello': MyHello,
   },
   methods: {
     onincrement(e) {
