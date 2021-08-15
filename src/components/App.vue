@@ -1,12 +1,24 @@
 <template>
   <div>
     <my-name :huga="hugaString"></my-name>
-    <!--    <dog-form></dog-form>-->
-    <!--    v-on:(子から送られてくるイベント名)-->
+    <!--<dog-form></dog-form>-->
+    <!--v-on:(子から送られてくるイベント名)-->
     <my-counter-button counter="10" v-on:increment="onincrement"></my-counter-button>
     {{ AreCounter }}
     <br>
-    <my-hello>要素がある</my-hello>
+    <my-hello>要素がある
+      <template v-slot:aaaa>1</template>
+      <!--v-slot: の省略記法-->
+      <template #bbbb>2</template>
+      <template #cccc>3</template>
+    </my-hello>
+    <my-hello>
+      <!--名前付きスロット-->
+      <template v-slot:aaaa></template>
+      <!--v-slot: の省略記法-->
+      <template #bbbb></template>
+      <template #cccc></template>
+    </my-hello>
   </div>
 </template>
 

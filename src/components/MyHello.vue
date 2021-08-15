@@ -4,6 +4,9 @@
     ここは共通
     <slot>フォールバックコンテンツ</slot>
     ここも共通
+    <slot name="aaaa">aです</slot>
+    <slot name="bbbb">bです</slot>
+    <slot name="cccc">cですね</slot>
   </div>
 </template>
 
