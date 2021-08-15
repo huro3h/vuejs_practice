@@ -9,7 +9,19 @@ export default {
     'counter'
   ],
   // 子 -> 親へ送るイベント
-  emits: ['increment'],
+  // カスタムイベントでの検証
+  // emits: ['increment'],
+  emits: {
+    increment(counter) {
+      // counterが存在し、整数値であればtrueを返す
+      if (counter && Number.isInteger(counter)) {
+        return true
+      } else {
+        console.log('error: invalid increment event!')
+        return false
+      }
+    }
+  },
   methods: {
     onclick() {
       // Vuexで言うmutationとpayloadみたい

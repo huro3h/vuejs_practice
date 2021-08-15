@@ -3,7 +3,7 @@
     <my-name :huga="hugaString"></my-name>
     <!--    <dog-form></dog-form>-->
     <!--    v-on:(子から送られてくるイベント名)-->
-    <my-counter-button :counter="10" v-on:increment="onincrement"></my-counter-button>
+    <my-counter-button counter="10" v-on:increment="onincrement"></my-counter-button>
     {{ AreCounter }}
   </div>
 </template>
