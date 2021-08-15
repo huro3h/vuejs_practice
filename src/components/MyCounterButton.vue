@@ -12,6 +12,7 @@ export default {
   emits: ['increment'],
   methods: {
     onclick() {
+      // Vuexで言うmutationとpayloadみたい
       this.$emit('increment', Number(this.counter))
     }
   }
